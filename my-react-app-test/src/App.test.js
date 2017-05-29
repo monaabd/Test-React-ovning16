@@ -4,6 +4,7 @@ import App from './App';
 import MyForm from './myForm';
 import { shallow } from 'enzyme';
 import { mount } from 'enzyme';
+import MyButton from './MyButton';
 
 /* test1 App comp runs*/
 test('renders without crashing', () => {
@@ -26,10 +27,10 @@ test('renders without crashing', () => {
 
     /*button test */
  test('renders button', () => {
-  let wrapper = shallow(<MyButton/>);
-	let actual = wrapper.find(<button />).hasClass("buttonClass");
-	let expected = true;
-	expect(actual).toBe(expected);
+   let wrapper = shallow(<MyButton />);
+ 	 let actual = wrapper.find("button").hasClass("buttonClass");
+   let expected = true;
+  	expect(actual).toBe(expected);
 
 
 

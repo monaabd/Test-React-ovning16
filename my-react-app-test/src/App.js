@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import MyForm from './myForm';
+import MyButton from './MyButton';
 
 class App extends Component {
   constructor(props) {
@@ -22,6 +23,8 @@ class App extends Component {
            <p>We are testing React </p>
            <MyForm  saveName={this.saveName}
                    saveEmail={this.saveEmail} />
+
+            <MyButton />
       </div>
     );
   }
