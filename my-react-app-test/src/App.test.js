@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import MyForm from './myForm';
 import { shallow } from 'enzyme';
+import { mount } from 'enzyme';
 
 test('renders without crashing', () => {
   const div = document.createElement('div');
@@ -10,15 +11,15 @@ test('renders without crashing', () => {
 });
 
 test('renders input-name', () => {
-   let wrapper = shallow(<MyForm />);
-   let actual = wrapper.contains(<input onChange={this.props.saveName} placeholder="name" />);
-   let expected = true;
-   expect(actual).toBe(expected);
-  });
+  test('renders inputfield name', () => {
+     let wrapper = mount(<MyForm />);
+     wrapper.find({ className: 'name'})
+   });
+   /* myform component - Email input field*/
 
-  test('renders input-email', () => {
-   let wrapper = shallow(<MyForm />);
-   let actual = wrapper.contains(<input onChange={this.props.saveEmail} placeholder="email" />);
-   let expected = true;
-  	expect(actual).toBe(expected);
+   test('renders inputfield email', () => {
+   let wrapper = mount(<MyForm />);
+         wrapper.find({ className: 'email'})
+       });
+
 });
