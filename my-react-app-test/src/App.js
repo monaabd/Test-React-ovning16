@@ -11,7 +11,7 @@ class App extends Component {
 
           <h2>Welcome to my React test</h2>
            <p>We are testing React </p>
-
+       <myForm />
       </div>
     );
   }

@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import { shallow } from 'enzyme';
 import myForm from './myForm';
+import { shallow } from 'enzyme';
 
 test('renders without crashing', () => {
   const div = document.createElement('div');
@@ -12,6 +12,11 @@ test('renders without crashing', () => {
 test('renders input-name', () => {
    let wrapper = shallow(<myForm />);
    let actual = wrapper.contains(<input />);
-   let expected = true;
-	  expect(actual).toBe(expected);
+	  expect(actual).toBe(true);
   });
+
+  test('renders input-email', () => {
+   let wrapper = shallow(<myForm/>);
+ 	let actual = wrapper.contains(<input />);
+  expect(actual).toBe(true);
+});

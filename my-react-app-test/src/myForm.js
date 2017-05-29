@@ -6,6 +6,7 @@ class myForm extends Component {
     return (
         <div>
             <input />
+            <input />
         </div>
 
    );
