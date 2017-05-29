@@ -1,16 +1,13 @@
 import React, { Component } from 'react';
 
 
-class myForm extends Component {
+class MyForm extends Component {
  render() {
-    return (
-        <div>
-            <input />
-            <input />
-        </div>
-
-   );
+    return <div>
+        <input placeholder="name" />
+        <input placeholder="email" />
+        </div>;
   }
 }
 
-export default myForm;
+export default MyForm;
