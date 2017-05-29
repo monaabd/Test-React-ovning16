@@ -13,6 +13,7 @@ class App extends Component {
          }
       this.saveName= this.saveName.bind(this);
       this.saveEmail= this.saveEmail.bind(this);
+      this.delete= this.delete.bind(this);
      }
   render() {
     return (
@@ -22,9 +23,13 @@ class App extends Component {
           <h2>Welcome to my React test</h2>
            <p>We are testing React </p>
            <MyForm  saveName={this.saveName}
-                   saveEmail={this.saveEmail} />
+                   saveEmail={this.saveEmail}
+                   delete={this.delete}
+                   name={this.state.name}
+               email={this.state.email}/>
 
-            <MyButton />
+            <MyButton  delete={this.delete} />
+            
       </div>
     );
   }
@@ -42,6 +47,12 @@ class App extends Component {
            email: email
         });
          console.log(email);
+    }
+    delete () {
+        this.setState ({
+            name: "",
+            email: ""
+        });
     }
 }
 
