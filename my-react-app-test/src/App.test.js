@@ -11,14 +11,14 @@ test('renders without crashing', () => {
 
 test('renders input-name', () => {
    let wrapper = shallow(<MyForm />);
-   let actual = wrapper.contains(<input placeholder="name" />);
+   let actual = wrapper.contains(<input onChange={this.props.saveName} placeholder="name" />);
    let expected = true;
    expect(actual).toBe(expected);
   });
 
   test('renders input-email', () => {
    let wrapper = shallow(<MyForm />);
-   let actual = wrapper.contains(<input placeholder="email" />);
+   let actual = wrapper.contains(<input onChange={this.props.saveEmail} placeholder="email" />);
    let expected = true;
   	expect(actual).toBe(expected);
 });
